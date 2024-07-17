@@ -19,14 +19,12 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		Group root = new Group();
+		Parent root = FXMLLoader.load(getClass().getResource("Views/Main.fxml"));
 		Scene scene = new Scene(root, Color.DARKGREY);
 		
 		Image icon = new Image("icon.png");
 		stage.getIcons().add(icon);
 		stage.setTitle("Password Manager");
-		stage.setWidth(600);
-		stage.setHeight(400);
 		stage.setResizable(false);
 		
 		stage.setScene(scene);
